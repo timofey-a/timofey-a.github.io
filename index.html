@@ -1,16 +1,14 @@
 <html>
-<head>
-</head>
+<head></head>
 <body>
-  <p><a href="intent://#Intent;package=ru.yandex.searchplugin;scheme=YandexBrowserInteractions;i.com.yandex.browser.shortcuts.webapp_source=8;launchFlags=0x14000000;end;"> Go to Password Manager (Yandex.Search) </a></p>
-
-  <p><a href="intent://#Intent;package=ru.yandex.searchplugin.canary;scheme=YandexBrowserInteractions;i.com.yandex.browser.shortcuts.webapp_source=8;launchFlags=0x14000000;end;"> Go to Password Manager (Yandex.Search canary) </a></p>
-
-  <p><a href="intent://#Intent;component=ru.yandex.searchplugin/com.yandex.browser.preferences.activities.BroSettingsActivity;S.open_method_source=intent;S.fragment=com.yandex.browser.preferences.fragments.PersonalDataManagerFragment;B.EXTRA_FINISH_SILENTLY=true;B.EXTRA_FINISH_SETTINGS_ON_BACK=true;end"> Go to Personal Data Manager (Yandex.Search) </a></p>
-
-  <p><a href="intent://#Intent;component=ru.yandex.searchplugin.canary/com.yandex.browser.preferences.activities.BroSettingsActivity;S.open_method_source=intent;S.fragment=com.yandex.browser.preferences.fragments.PersonalDataManagerFragment;B.EXTRA_FINISH_SILENTLY=true;B.EXTRA_FINISH_SETTINGS_ON_BACK=true;end"> Go to Personal Data Manager (Yandex.Search canary) </a></p>
-
-  <p><a href="intent://#Intent;component=ru.yandex.searchplugin.canary/com.yandex.browser.preferences.activities.BroSettingsActivity;scheme=YandexBrowserInteractions;S.open_method_source=intent;S.fragment=com.yandex.browser.preferences.fragments.PersonalDataManagerFragment;B.EXTRA_FINISH_SILENTLY=true;B.EXTRA_FINISH_SETTINGS_ON_BACK=true;end"> Go to Personal Data Manager (Yandex.Search canary) </a></p>
+  <h3>PP</h3>
+  <p><a href="personal-data-manager://?screen=main&open_method_source=intent"> Password Manager </a></p>
+  <p><a hred="personal-data-manager://?component=ru.yandex.searchplugin.canary?screen=main&open_method_source=intent"> Password Manager (with component) </a></p>
+  <p><a href="personal-data-manager://?screen=passwords&open_method_source=intent"> Passwords </a></p>
+  <p><a href="personal-data-manager://?screen=cards&open_method_source=intent"> Cards </a></p>
+  <p><a href="personal-data-manager://?screen=loyalty_cards&open_method_source=intent"> Loyalty Cards </a></p>
+  <p><a href="personal-data-manager://"> Password manager (without params) </a></p>
+  <p><a href="personal-data-manager://?screen=incorrect"> Password manager with incorrect param </a></p>
 </body>
 </html>
 
