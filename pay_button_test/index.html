@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>pay sticky button</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        (async function() {
+            var count = 0;
+            let handle = await window.yandex.pay.stickyButton.mount({ 
+                merchant: { 
+                    id: 'yandex_games_b9b09e9dcc29ef3063e10482b942aa59', 
+                    name: 'merchantName', 
+                    url:'merchantUrl' 
+                },
+                paymentMethodOptions: {
+                    allowedAuthMethods: [],
+                    allowedCardNetworks: []
+                },
+                type: 'SIMPLE',
+                sessionId: '123',
+                env: 'SANDBOX'
+            }, () => {
+                count += 1;
+                document.getElementById("clicker").textContent = "" + count;
+            })
+
+            window.addEventListener('beforeunload', function (e) {
+                handle.unmount();
+            });
+        })()
+    </script>
+</head>
+
+<body>
+    <div style="margin-top: 30%">
+        <h3 align="center">Тестовый сайт</h3>
+        <h3 id="clicker" align="center">0</h3>
+    </div>
+</body>
